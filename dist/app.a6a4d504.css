@@ -20,9 +20,6 @@
   outline: none;
 }
 .v-button .icons {
-  width: 1em;
-  height: 1em;
-  margin-right: 0.4em;
   order: 1;
 }
 .v-button .content {
@@ -37,3 +34,8 @@
   order: 2;
 }
 
+.icons {
+  width: 1em;
+  height: 1em;
+  margin-right: 0.4em;
+}

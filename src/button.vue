@@ -1,8 +1,6 @@
 <template>
   <button class="v-button" :class="{[`icon-${iconPosition}`]:iconPosition}">
-    <svg class="icons" v-if="icon">
-      <use :xlink:href="`#icon-${icon}`" />
-    </svg>
+    <v-icon class="icons" v-if="icon" :name="icon"></v-icon>
     <div class="content">
       <slot></slot>
     </div>
@@ -50,9 +48,6 @@ export default {
     outline: none;
   }
   .icons {
-    width: 1em;
-    height: 1em;
-    margin-right: 0.4em;
     order: 1;
   }
   .content {
