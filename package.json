@@ -1,0 +1,34 @@
+{
+  "name": "VPRO-UI",
+  "version": "1.0.0",
+  "description": "特色的Vue框架 可以创建精美的Web mobile应用",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RyzenPan/VPRO-UI.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RyzenPan/VPRO-UI/issues"
+  },
+  "homepage": "https://github.com/RyzenPan/VPRO-UI#readme",
+  "dependencies": {
+    "git-open": "^2.1.0",
+    "vue": "^2.6.11",
+    "vue-hot-reload-api": "^2.3.4"
+  },
+  "devDependencies": {
+    "@vue/component-compiler-utils": "^3.1.1",
+    "less": "^3.10.3",
+    "parcel-bundler": "^1.12.4",
+    "vue-template-compiler": "^2.6.11"
+  },
+  "alias": {
+    "vue": "./node_modules/vue/dist/vue.common.js"
+  }
+}
