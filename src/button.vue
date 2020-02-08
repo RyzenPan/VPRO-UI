@@ -1,6 +1,7 @@
 <template>
   <button class="v-button" :class="{[`icon-${iconPosition}`]:iconPosition}">
     <v-icon class="icons" v-if="icon" :name="icon"></v-icon>
+    <v-icon class="icons loadding" v-if="icon" name="loadding"></v-icon>
     <div class="content">
       <slot></slot>
     </div>
@@ -27,6 +28,14 @@ export default {
 </script>
 
 <style lang="less">
+@keyframes spin{
+  0% { 
+    transform: rotate(0deg)
+   }
+  100% { 
+    transform: rotate(360deg)
+   }
+}
 .v-button {
   font-size: var(--font-size);
   height: var(--button-height);
@@ -65,5 +74,9 @@ export default {
       order:2;
     }
   }
+}
+
+.loadding {
+ animation: spin 1.5s infinite linear; 
 }
 </style>

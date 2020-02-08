@@ -1,3 +1,11 @@
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 .v-button {
   font-size: var(--font-size);
   height: var(--button-height);
@@ -32,6 +40,9 @@
   margin: 0;
   margin-left: 0.4em;
   order: 2;
+}
+.loadding {
+  animation: spin 1.5s infinite linear;
 }
 
 .icons {
