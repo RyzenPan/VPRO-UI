@@ -41,7 +41,7 @@
   margin-left: 0.4em;
   order: 2;
 }
-.loadding {
+.loading {
   animation: spin 1.5s infinite linear;
 }
 

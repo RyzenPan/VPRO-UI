@@ -1,7 +1,7 @@
 <template>
-  <button class="v-button" :class="{[`icon-${iconPosition}`]:iconPosition}">
-    <v-icon class="icons" v-if="icon" :name="icon"></v-icon>
-    <v-icon class="icons loadding" v-if="icon" name="loadding"></v-icon>
+  <button class="v-button" :class="{[`icon-${iconPosition}`]:iconPosition}" @click="$emit('click')">
+    <v-icon class="icons" v-if="icon && !loading" :name="icon"></v-icon>
+    <v-icon class="icons loading" v-if="loading" name="loading"></v-icon>
     <div class="content">
       <slot></slot>
     </div>
@@ -22,6 +22,10 @@ export default {
           return true
         }
       }
+    },
+    loading:{
+      type:Boolean,
+      default:false
     }
   }
 }
@@ -76,7 +80,7 @@ export default {
   }
 }
 
-.loadding {
- animation: spin 1.5s infinite linear; 
+.loading {
+ animation: spin 1.5s infinite linear;
 }
 </style>

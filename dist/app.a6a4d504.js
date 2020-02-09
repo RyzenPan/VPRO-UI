@@ -12457,6 +12457,10 @@ var _default = {
           return true;
         }
       }
+    },
+    loading: {
+      type: Boolean,
+      default: false
     }
   }
 };
@@ -12481,17 +12485,22 @@ exports.default = _default;
       class:
         ((_obj = {}),
         (_obj["icon-" + _vm.iconPosition] = _vm.iconPosition),
-        _obj)
+        _obj),
+      on: {
+        click: function($event) {
+          return _vm.$emit("click")
+        }
+      }
     },
     [
-      _vm.icon
+      _vm.icon && !_vm.loading
         ? _c("v-icon", { staticClass: "icons", attrs: { name: _vm.icon } })
         : _vm._e(),
       _vm._v(" "),
-      _vm.icon
+      _vm.loading
         ? _c("v-icon", {
-            staticClass: "icons loadding",
-            attrs: { name: "loadding" }
+            staticClass: "icons loading",
+            attrs: { name: "loading" }
           })
         : _vm._e(),
       _vm._v(" "),
@@ -12615,7 +12624,11 @@ _vue.default.component("v-button", _button.default);
 _vue.default.component("v-icon", _icon.default);
 
 new _vue.default({
-  el: "#app"
+  el: "#app",
+  data: {
+    flag: false,
+    flag1: false
+  }
 });
 },{"vue":"node_modules/vue/dist/vue.common.js","./button":"src/button.vue","./icon.vue":"src/icon.vue"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
@@ -12645,7 +12658,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "63266" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57056" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
